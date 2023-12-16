@@ -1,61 +1,87 @@
-package com.tekup.books.models;
+// package com.tekup.books.models;
 
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+// import java.util.Set;
+// import java.util.HashSet;
+// import jakarta.persistence.*;
+// import jakarta.validation.constraints.Email;
+// import jakarta.validation.constraints.NotBlank;
+// import jakarta.validation.constraints.Size;
+// @Entity
+// @Table(name = "users", 
+//     uniqueConstraints = { 
+//       @UniqueConstraint(columnNames = "username"),
+//       @UniqueConstraint(columnNames = "email") 
+//     })
+// public class User {
+//   @Id
+//   @GeneratedValue(strategy = GenerationType.IDENTITY)
+//   private Long id;
 
-public class User {
-     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-    private String username;
-    private String password;
-    private boolean enabled;
+//   @NotBlank
+//   @Size(max = 20)
+//   private String username;
 
-    public User(Long id, String username, String password, boolean enabled) {
-        this.id = id;
-        this.username = username;
-        this.password = password;
-        this.enabled = enabled;
-    }
+//   @NotBlank
+//   @Size(max = 50)
+//   @Email
+//   private String email;
 
-    public User() {
-    }
+//   @NotBlank
+//   @Size(max = 120)
+//   private String password;
 
+//   @ManyToMany(fetch = FetchType.LAZY)
+//   @JoinTable(  name = "user_roles", 
+//         joinColumns = @JoinColumn(name = "user_id"), 
+//         inverseJoinColumns = @JoinColumn(name = "role_id"))
+//   private Set<Role> roles = new HashSet<>();
 
-    public Long getId() {
-        return this.id;
-    }
+//   public User() {
+//   }
 
-    public void setId(Long id) {
-        this.id = id;
-    }
+//   public User(String username, String email, String password) {
+//     this.username = username;
+//     this.email = email;
+//     this.password = password;
+//   }
 
-    public String getUsername() {
-        return this.username;
-    }
+//   public Long getId() {
+//     return id;
+//   }
 
-    public void setUsername(String username) {
-        this.username = username;
-    }
+//   public void setId(Long id) {
+//     this.id = id;
+//   }
 
-    public String getPassword() {
-        return this.password;
-    }
+//   public String getUsername() {
+//     return username;
+//   }
 
-    public void setPassword(String password) {
-        this.password = password;
-    }
+//   public void setUsername(String username) {
+//     this.username = username;
+//   }
 
-    public boolean isEnabled() {
-        return this.enabled;
-    }
+//   public String getEmail() {
+//     return email;
+//   }
 
-    public boolean getEnabled() {
-        return this.enabled;
-    }
+//   public void setEmail(String email) {
+//     this.email = email;
+//   }
 
-    public void setEnabled(boolean enabled) {
-        this.enabled = enabled;
-    }
-}
+//   public String getPassword() {
+//     return password;
+//   }
+
+//   public void setPassword(String password) {
+//     this.password = password;
+//   }
+
+//   public Set<Role> getRoles() {
+//     return roles;
+//   }
+
+//   public void setRoles(Set<Role> roles) {
+//     this.roles = roles;
+//   }
+// }
